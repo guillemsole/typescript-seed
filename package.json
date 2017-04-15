@@ -1,0 +1,27 @@
+{
+  "name": "typescript-seed",
+  "version": "0.1.0",
+  "description": "Typescript seed",
+  "scripts": {
+    "pretest": "tsc",
+    "test": "mocha"
+  },
+  "keywords": [
+    "TypeScript",
+    "Seed"
+  ],
+  "author": "Aleix Morgadas <aleixmorgadas@openmailbox.org>",
+  "license": "Apache License 2.0",
+  "devDependencies": {
+    "@types/chai": "^3.4.35",
+    "@types/mocha": "^2.2.40",
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0",
+    "mocha-typescript": "^1.0.23",
+    "ts-node": "^3.0.2",
+    "typescript": "^2.2.2"
+  },
+  "dependencies": {
+    "rxjs": "^5.3.0"
+  }
+}
