@@ -3,8 +3,11 @@
   "version": "0.1.0",
   "description": "Typescript seed",
   "scripts": {
-    "pretest": "tsc",
-    "test": "mocha"
+    "pretest": "rm -rf build && tsc",
+    "test": "mocha build/test/**/*test.js -R spec --bail",
+    "test:cov": "istanbul cover --include-all-sources --dir ./build/coverage node_modules/mocha/bin/_mocha -- build/test/**/*test.js -R spec --bail",
+    "test:remap": "remap-istanbul -i build/coverage/coverage.json -o coverage -t html",
+    "build": "rm -rf build && tsc"
   },
   "keywords": [
     "TypeScript",
@@ -16,7 +19,9 @@
     "@types/chai": "^3.4.35",
     "@types/mocha": "^2.2.40",
     "chai": "^3.5.0",
+    "istanbul": "^0.4.5",
     "mocha": "^3.2.0",
+    "remap-istanbul": "^0.9.5",
     "ts-node": "^3.0.2",
     "typescript": "^2.2.2"
   },
