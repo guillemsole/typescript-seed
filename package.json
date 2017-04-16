@@ -4,8 +4,8 @@
   "description": "Typescript seed",
   "scripts": {
     "pretest": "rm -rf build && tsc",
-    "test": "mocha build/test/**/*test.js -R spec --bail",
-    "test:cov": "istanbul cover --include-all-sources --dir ./build/coverage node_modules/mocha/bin/_mocha -- build/test/**/*test.js -R spec --bail",
+    "test": "mocha build/test/**/*.spec.js -R spec --bail",
+    "test:cov": "rm -rf coverage && istanbul cover --include-all-sources --dir ./build/coverage node_modules/mocha/bin/_mocha -- build/test/**/*.spec.js -R spec --bail",
     "test:remap": "remap-istanbul -i build/coverage/coverage.json -o coverage -t html",
     "build": "rm -rf build && tsc"
   },
