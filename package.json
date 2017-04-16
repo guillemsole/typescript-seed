@@ -21,6 +21,7 @@
     "chai": "^3.5.0",
     "istanbul": "^0.4.5",
     "mocha": "^3.2.0",
+    "mocha-typescript": "^1.0.23",
     "remap-istanbul": "^0.9.5",
     "ts-node": "^3.0.2",
     "typescript": "^2.2.2"
