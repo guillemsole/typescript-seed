@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "description": "Typescript seed",
   "scripts": {
-    "pretest": "rm -rf build && tsc",
-    "test": "mocha build/test/**/*.spec.js -R spec --bail",
-    "test:cov": "rm -rf coverage && istanbul cover --include-all-sources --dir ./build/coverage node_modules/mocha/bin/_mocha -- build/test/**/*.spec.js -R spec --bail",
-    "test:remap": "remap-istanbul -i build/coverage/coverage.json -o coverage -t html",
-    "build": "rm -rf build && tsc"
+    "pretest": "rm -rf dist && tsc",
+    "test": "mocha dist/test/**/*.spec.js -R spec --bail",
+    "test:cov": "rm -rf coverage && istanbul cover --include-all-sources --dir ./dist/coverage node_modules/mocha/bin/_mocha -- dist/test/**/*.spec.js -R spec --bail",
+    "test:remap": "remap-istanbul -i dist/coverage/coverage.json -o coverage -t html",
+    "dist": "rm -rf dist && tsc"
   },
   "keywords": [
     "TypeScript",
@@ -15,6 +15,8 @@
   ],
   "author": "Aleix Morgadas <aleixmorgadas@openmailbox.org>",
   "license": "Apache License 2.0",
+  "main": "dist/index.js",
+  "typings":  "dist/index.d.ts",
   "devDependencies": {
     "@types/chai": "^3.4.35",
     "@types/mocha": "^2.2.40",

@@ -8,13 +8,19 @@
     "experimentalDecorators": true,
     "declaration": true,
     "moduleResolution": "node",
-    "outDir": "build",
+    "outDir": "dist",
     "lib": [
       "es2016",
       "dom"
     ]
   },
+  "files": [
+    "index.ts"
+  ],
   "exclude": [
     "node_modules"
+  ],
+   "include": [
+    "test/**/*.spec.ts"
   ]
 }

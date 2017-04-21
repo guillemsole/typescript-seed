@@ -92,3 +92,4 @@ modules.xml
 
 .vscode/
 build/
+dist/
