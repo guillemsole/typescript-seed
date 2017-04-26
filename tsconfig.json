@@ -15,12 +15,13 @@
     ]
   },
   "files": [
-    "index.ts"
+    "src/server.ts"
   ],
   "exclude": [
     "node_modules"
   ],
-   "include": [
-    "test/**/*.spec.ts"
+  "include": [
+    "test/**/*.spec.ts",
+    "src/**/*.ts"
   ]
 }
