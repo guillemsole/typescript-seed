@@ -16,6 +16,7 @@ export class Server {
 
   public config() {
     //empty for now
+
   }
 
   /**
