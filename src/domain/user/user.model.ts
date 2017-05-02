@@ -5,7 +5,6 @@ export interface User extends Document {
   name: string;
   email: string;
   password: string;
-
 }
 
 let UserSchema = new Schema({
