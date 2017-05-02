@@ -1,3 +1,3 @@
 export default {
-  db: 'mongodb://localhost:30000/alertry-test'
+  db: 'mongodb://localhost:30000/seed-test'
 }

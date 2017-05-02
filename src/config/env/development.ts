@@ -1,3 +1,3 @@
 export default {
-  db: 'mongodb://xxxxxxx:xxxxx/alertry-dev'
+  db: 'mongodb://xxxxxxx:xxxxx/seed-dev'
 }
