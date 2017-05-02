@@ -8,7 +8,7 @@ export class UserService {
     this.mongoModel = mongoModel || UserMongo;
   }
 
-  create(name: string, email: string, password: string) {
+  async create(name: string, email: string, password: string) {
 
     let user = new this.mongoModel({
       name: name,
@@ -16,9 +16,15 @@ export class UserService {
       password: password
     });
 
-    user.save();
+    return await user.save();
+  }
 
-    return user;
+  async findByEmail(email: string) {
+    return await this.mongoModel.findOne({email:email});
+  }
+
+  async findById(id: string) {
+    return await this.mongoModel.findById(id);
   }
 
 }

@@ -4,11 +4,11 @@
   "description": "Typescript seed",
   "scripts": {
     "pretest": "rm -rf dist && tsc",
-    "test": "mocha dist/test/**/*.spec.js -R spec --bail",
+    "test": "NODE_ENV=test mocha dist/test/**/*.spec.js -R spec --bail",
     "test:cov": "rm -rf coverage && istanbul cover --include-all-sources --dir ./dist/coverage node_modules/mocha/bin/_mocha -- dist/test/**/*.spec.js -R spec --bail",
     "test:remap": "remap-istanbul -i dist/coverage/coverage.json -o coverage -t html",
     "dist": "rm -rf dist && tsc",
-    "start": "tsc && node bin/www.js"
+    "start": "tsc && node bin/www.js NODE_ENV=local"
   },
   "keywords": [
     "TypeScript",

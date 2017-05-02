@@ -12,11 +12,15 @@
     "lib": [
       "es2016",
       "dom"
+    ],
+    "typeRoots": [
+      "node_modules/@types"
     ]
   },
   "files": [
     "src/server.ts"
   ],
+
   "exclude": [
     "node_modules"
   ],

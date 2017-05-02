@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 "use strict";
 
-const Server = require('../dist/server').Server,
+const Server = require('../dist/src/server').Server,
     http = require("http"),
     debug = require("debug")("express:server");
 

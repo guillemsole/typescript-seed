@@ -1,5 +1,7 @@
 import * as express from 'express';
 import UserRouter from "./controller/user/user.router";
+import * as mongoose from "mongoose";
+import config from "./config/config";
 
 export class Server {
   public app: express.Application;
@@ -15,7 +17,14 @@ export class Server {
   }
 
   public config() {
-    //empty for now
+    mongoose.connect(config.db, (err, res) => {
+      if (err) {
+        console.error('Could not connect to MongoDB!');
+        console.log(err);
+      }
+    });
+
+    console.log('Alertry alerts received in port');
 
   }
 
