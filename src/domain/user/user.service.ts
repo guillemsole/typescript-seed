@@ -26,5 +26,4 @@ export class UserService {
   async findById(id: string) {
     return await this.mongoModel.findById(id);
   }
-
 }

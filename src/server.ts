@@ -23,9 +23,6 @@ export class Server {
         console.log(err);
       }
     });
-
-    console.log('Alertry alerts received in port');
-
   }
 
   /**
