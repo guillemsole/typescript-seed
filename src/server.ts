@@ -1,5 +1,5 @@
 import * as express from 'express';
-import GroupRouter from "./controller/group/group.router";
+import UserRouter from "./controller/user/user.router";
 
 export class Server {
   public app: express.Application;
@@ -26,7 +26,7 @@ export class Server {
    */
   public routes() {
     [
-      GroupRouter.create()
+      UserRouter.create()
     ].forEach(route => {
       route.decorate(this.app);
     });
