@@ -1,6 +1,7 @@
 import * as express from 'express';
 import UserRouter from "./controller/user/user.router";
 import * as mongoose from "mongoose";
+import * as bodyParser from "body-parser";
 import config from "./config/config";
 
 export class Server {
@@ -23,6 +24,8 @@ export class Server {
         console.log(err);
       }
     });
+    this.app.use(bodyParser.urlencoded({extended: true}));
+    this.app.use(bodyParser.json({limit: '50mb'}));
   }
 
   /**

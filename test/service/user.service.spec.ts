@@ -1,6 +1,6 @@
 import {expect, assert} from 'chai';
-import {UserService} from "../src/domain/user/user.service";
-import {Server} from "../src/server";
+import {UserService} from "../../src/domain/user/user.service";
+import {Server} from "../../src/server";
 
 const userService = new UserService();
 Server.bootstrap();

@@ -1,5 +1,5 @@
 import {expect, assert} from 'chai';
-import {AuthService} from "../src/domain/auth.service";
+import {AuthService} from "../../src/domain/auth.service";
 
 const authService = new AuthService();
 
