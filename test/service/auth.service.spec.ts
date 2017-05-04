@@ -1,9 +1,9 @@
 import {expect, assert} from 'chai';
-import {AuthService} from "../../src/domain/auth.service";
+import {AuthService} from "../../src/service/auth.service";
 
 const authService = new AuthService();
 
-describe("Auth service test", () => {
+describe("Auth domain test", () => {
   it("should generate token from userId", async() => {
     let userId = "testUserId";
     let token = authService.createToken(userId);

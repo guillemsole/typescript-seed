@@ -1,6 +1,6 @@
 import {ExpressSignature} from "../Route";
 import {UserService} from "../../domain/user/user.service";
-import {AuthService} from "../../domain/auth.service";
+import {AuthService} from "../../service/auth.service";
 
 const userService = new UserService();
 const authService = new AuthService();
