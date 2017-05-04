@@ -1,5 +1,6 @@
 import {User, default as UserMongo} from "./user.model";
 import {Model} from "mongoose";
+import {Password} from "./password";
 
 export class UserService {
   mongoModel: Model<User>;
@@ -13,7 +14,7 @@ export class UserService {
     let user = new this.mongoModel({
       name: name,
       email: email,
-      password: password
+      password: Password.encrypt(password).value
     });
 
     return await user.save();
