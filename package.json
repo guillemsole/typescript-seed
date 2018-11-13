@@ -4,10 +4,11 @@
   "description": "Typescript seed",
   "scripts": {
     "pretest": "rm -rf dist && tsc",
-    "test": "mocha dist/test/**/*.spec.js -R spec --bail",
+    "test": "NODE_ENV=test mocha dist/test/**/**/*.spec.js -R spec --bail",
     "test:cov": "rm -rf coverage && istanbul cover --include-all-sources --dir ./dist/coverage node_modules/mocha/bin/_mocha -- dist/test/**/*.spec.js -R spec --bail",
     "test:remap": "remap-istanbul -i dist/coverage/coverage.json -o coverage -t html",
-    "dist": "rm -rf dist && tsc"
+    "dist": "rm -rf dist && tsc",
+    "start": "tsc && node bin/www.js NODE_ENV=local"
   },
   "keywords": [
     "TypeScript",
@@ -15,11 +16,10 @@
   ],
   "author": "Aleix Morgadas <aleixmorgadas@openmailbox.org>",
   "license": "Apache License 2.0",
-  "main": "dist/index.js",
-  "typings":  "dist/index.d.ts",
   "devDependencies": {
     "@types/chai": "^3.4.35",
     "@types/mocha": "^2.2.40",
+    "@types/mongodb": "^2.1.43",
     "chai": "^3.5.0",
     "istanbul": "^0.4.5",
     "mocha": "^3.2.0",
@@ -29,6 +29,18 @@
     "typescript": "^2.2.2"
   },
   "dependencies": {
-    "rxjs": "^5.3.0"
+    "@reactivex/rxjs": "^5.3.0",
+    "@types/body-parser": "^1.16.3",
+    "@types/express": "^4.0.35",
+    "@types/mongoose": "^4.7.11",
+    "@types/node": "^7.0.16",
+    "@types/supertest": "^2.0.0",
+    "@types/winston": "^2.3.1",
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "jsonwebtoken": "^7.4.0",
+    "mongoose": "^4.9.6",
+    "supertest": "^3.0.0",
+    "winston": "^2.3.1"
   }
 }
