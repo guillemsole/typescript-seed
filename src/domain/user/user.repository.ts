@@ -2,7 +2,7 @@ import {User, default as UserMongo} from "./user.model";
 import {Model} from "mongoose";
 import {Password} from "./password";
 
-export class UserService {
+export class UserRepository {
   mongoModel: Model<User>;
 
   constructor(mongoModel?: Model<User>) {

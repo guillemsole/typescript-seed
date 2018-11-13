@@ -1,8 +1,8 @@
 import {ExpressSignature} from "../Route";
-import {UserService} from "../../domain/user/user.service";
+import {UserRepository} from "../../domain/user/user.repository";
 import {AuthService} from "../../service/auth.service";
 
-const userService = new UserService();
+const userService = new UserRepository();
 const authService = new AuthService();
 
 export let register: ExpressSignature = async (request, response, next) => {
