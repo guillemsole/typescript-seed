@@ -14,8 +14,8 @@
     "TypeScript",
     "Seed"
   ],
-  "author": "Aleix Morgadas <aleixmorgadas@openmailbox.org>",
-  "license": "Apache License 2.0",
+  "author": "Guillem Solé",
+  "license": "MIT",
   "devDependencies": {
     "@types/chai": "^3.4.35",
     "@types/mocha": "^2.2.40",
